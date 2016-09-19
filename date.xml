@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<produse>
+    <produs>
+        <nume>Frigider Zanussi AB1</nume>
+        <pret>1200</pret>
+        <cod>FZAB1</cod>
+        <reducere>10</reducere>
+        <latime>70</latime>
+        <adancime>70</adancime>
+        <inaltime>205</inaltime>
+        <categorie>electrocasnice</categorie>
+    </produs>
+    .....
+    <produs>
+        <nume>Samsung S7</nume>
+        <pret>4200</pret>
+        <cod>TMSS7</cod>
+        <reducere>10</reducere>
+        <latime>5.5</latime>
+        <adancime>0.9</adancime>
+        <inaltime>11.5</inaltime>
+        <categorie>telefoane</categorie>
+    </produs>    
+</produse>
