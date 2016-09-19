@@ -3,40 +3,28 @@
  */
 public class mainF {
     public static void main(String[] args) {
-        CitireFisier.read("date.xml");
-      //  System.out.println(CitireFisier.read("date.xml"));
-     /*   String xml = new String("<produse>\n" +
-                "    <produs>\n" +
-                "        <nume>Frigider Zanussi AB1</nume>\n" +
-                "        <pret>1200</pret>\n" +
-                "        <cod>FZAB1</cod>\n" +
-                "        <reducere>10</reducere>\n" +
-                "        <latime>70</latime>\n" +
-                "        <adancime>70</adancime>\n" +
-                "        <inaltime>205</inaltime>\n" +
-                "        <categorie>electrocasnice</categorie>\n" +
-                "    </produs>\n" +
-                "    <produs>\n" +
-                "        <nume>Samsung S7</nume>\n" +
-                "        <pret>4200</pret>\n" +
-                "        <cod>TMSS7</cod>\n" +
-                "        <reducere>10</reducere>\n" +
-                "        <latime>5.5</latime>\n" +
-                "        <adancime>0.9</adancime>\n" +
-                "        <inaltime>11.5</inaltime>\n" +
-                "        <categorie>telefoane</categorie>\n" +
-                "    </produs>    \n" +
-                "</produse>");
-*/
+        String xml = CitireFisier.read("date.xml");
 
+        String nume = search("nume" ,xml);
+        double pret = Double.parseDouble(search("pret" ,xml));
+        String cod = search("cod" ,xml);
+        int reducere = Integer.parseInt(search("reducere" ,xml));
+        double latime = Double.parseDouble(search("latime" ,xml));
+        double adancime =Double.parseDouble(search("adancime" ,xml));
+        double inaltime =Double.parseDouble(search("inaltime" ,xml));
+        String categorie =search("categorie" ,xml);
+
+
+        Produs prod1 = new Produs(nume, pret, cod, reducere, latime, adancime, inaltime, categorie);
+        System.out.println(prod1);
     }
+
     public static String search (String tagname, String xml) {
         String txt;
         int start = xml.indexOf("<"+tagname+">");
         start = start + tagname.length() + 2 ;
         int end = xml.indexOf("</"+tagname+">");
         txt = xml.substring(start, end);
-   //     System.out.println(txt);
         return txt;
 
     }
